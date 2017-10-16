@@ -1,0 +1,17 @@
+{
+  "name": "HHHH",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "webpack-cli",
+    "dev": "webpack-dev-server --content-base --port 2333"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-vue": "^1.2.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0",
+    "vue": "^2.5.2",
+    "vue-template-compiler": "^2.5.2",
+    "webpack-dev-server": "^2.9.2"
+  }
+}
