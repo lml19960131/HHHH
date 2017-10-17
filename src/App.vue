@@ -1,9 +1,13 @@
 <template>
-    <h1>Hello-world</h1>
+    <h1>连明亮</h1>
 </template>
 
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
     body {
-        background-color: red;
+        background-color: deepskyblue;
     }
 </style>
