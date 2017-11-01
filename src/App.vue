@@ -7,6 +7,8 @@
         <component5></component5>
         <component6></component6>
         <component7></component7>
+        <component8></component8>
+        <component9></component9>
     </div>
 </template>
 
@@ -19,9 +21,13 @@
     import component5 from './components/component5.vue'
     import component6 from './components/component6.vue'
     import component7 from './components/component7.vue'
+    import component8 from "./components/component8.vue"
+    import component9 from "./components/component9.vue";
     export default{
         name: 'components',
         components:{
+            component9,
+            component8,
             component1,
             component2,
             component3,
