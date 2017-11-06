@@ -7,9 +7,15 @@
         name: 'component1',
         data(){
             return {
-                message: 'Hello World'
+                message: '连明亮'
             }
         }
     }
-
 </script>
+
+<style>
+    .asd{
+        color: deepskyblue;
+        font-size: 20px;
+    }
+</style>
