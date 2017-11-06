@@ -11,6 +11,7 @@
         <component9></component9>
         <component10></component10>
         <component11></component11>
+        <component12></component12>
     </div>
 </template>
 
@@ -26,7 +27,8 @@
     import component8 from './components/component8.vue'
     import component9 from './components/component9.vue'
     import component10 from './components/component10.vue'
-    import component11 from './components/component11.vue';
+    import component11 from './components/component11.vue'
+    import component12 from './components/compontent12.vue';
     export default{
         name: 'components',
         components:{
@@ -41,6 +43,7 @@
             component7,
             component10,
             component11,
+            component12,
         }
     }
 </script>
