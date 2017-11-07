@@ -13,6 +13,7 @@
         <component11></component11>
         <component12></component12>
         <component13></component13>
+        <component14></component14>
     </div>
 </template>
 
@@ -31,6 +32,7 @@
     import component11 from './components/component11.vue'
     import component12 from './components/component12.vue'
     import component13 from './components/component13.vue'
+    import component14 from './components/component14.vue'
     export default{
         name: 'components',
         components:{
@@ -47,6 +49,7 @@
             component11,
             component12,
             component13,
+            component14,
         }
     }
 </script>
