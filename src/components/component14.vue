@@ -25,6 +25,9 @@
                 }}
         }
     }
+    //fullName="adsa dsadas";
+    //document.write("firstname:" +data.fullName.firstName);
+    //document.write("lastname:" +data.fullName.lastName );
 </script>
 
 <style>
