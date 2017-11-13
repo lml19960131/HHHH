@@ -7,7 +7,7 @@
         name: 'component1',
         data(){
             return {
-                message: '连明亮'
+                message: '连明aa亮'
             }
         }
     }
