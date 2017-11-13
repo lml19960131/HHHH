@@ -3,16 +3,18 @@ import App from './App.vue';
 import VueRouter from 'vue-router';
 import goods from './components/goods/goods.vue';
 import ratings from './components/ratings/ratings.vue';
+import seller from './components/seller/seller.vue';
 
 Vue.use(VueRouter);
 
-const routers= [
+const routes= [
     {path:'/goods',component:goods},
-    {path:'/ratings',component:ratings}
+    {path:'/ratings',component:ratings},
+    {path:'/seller',component:seller},
 ];
 
 const router = new VueRouter({
-    routers
+    routes
 });
 
 const app = new Vue({
@@ -21,3 +23,4 @@ const app = new Vue({
     components: { App }
 }).$mount('#app');
 
+router.push('/goods');
