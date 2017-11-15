@@ -4,7 +4,7 @@
 
 <script>
     export default{
-        name: 'componene9',
+        name: 'component9',
         data() {
             return {
                 firstName : 'Foo',
