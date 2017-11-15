@@ -26,15 +26,6 @@
                 sellers:{}
             }
         },
-        created() {
-            this.$http.get('/data.json').then(response =>{
-                response = response.body;
-                if(response.errno===0){
-                    this.sellers = response.data;
-                    console.log(this.sellers);
-                }
-            })
-        },
         components: {
             top,
         },

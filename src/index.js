@@ -26,3 +26,4 @@ const app = new Vue({
 }).$mount('#app');
 
 router.push('/goods');
+
