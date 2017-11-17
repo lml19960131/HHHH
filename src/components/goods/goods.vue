@@ -1,14 +1,15 @@
 <template>
-    <div>I am goods</div>
+    <div class="goods">
+        <div class="menu-wrapper"></div>
+        <div class="foods-wrapper"></div>
+    </div>
 </template>
 
 <script>
     export default{
-        name:'goods',
+        name: 'goods',
         data(){
-            return{
-
-            }
+            return {}
         }
     }
 </script>
