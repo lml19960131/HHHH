@@ -2,13 +2,40 @@
     <div class="goods">
         <div class="menu-wrapper">
             <ul>
-                <li v-for="item in goods">
-                    <span v-show="item.type>0" :class="icon" :class="classMap[item.type]"></span>
-                    <span class="text">{{item.name}}</span>
+                <li v-for="item in goods" class="menu-item">
+                    <span class="menu-text">
+                        <span v-show="item.type>0" class="menu-icon"
+                              :class="classMap2[item.type]"></span>{{item.name}}
+                    </span>
                 </li>
             </ul>
         </div>
-        <div class="foods-wrapper"></div>
+        <div class="foods-wrapper">
+            <ul>
+                <li v-for="item in goods"  class="food-list">
+                    <h1 class="title">{{item.name}}</h1>
+                    <ul>
+                        <li v-for="food in item.foods" class="food-item">
+                            <div class="food-icon">
+                                <img :src="food.icon">
+                            </div>
+                            <div class="food-content">
+                                <h2 class="food-name">{{food.name}}</h2>
+                                <p class="food-description">{{food.description}}</p>
+                                <div class="food-extra">
+                                    <span>月售{{food.sellCount}}份</span>
+                                    <span>好评率{{food.rating}}%</span>
+                                </div>
+                                <div class="food-price">
+                                    <span>￥{{food.price}}</span>
+                                    <span v-show="food.oldPrice">￥{{food.oldPrice}}</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -1096,7 +1123,7 @@
             }
         },
         created() {
-            this.classMap=['decrease','discount','special','invoice','guarantee']
+            this.classMap2=['decrease','discount','special','invoice','guarantee']
         }
     }
 </script>
@@ -1115,6 +1142,54 @@
         flex: 0 0 80px;
         width: 80px;
         background-color: #f3f5f7;
+    }
+
+    .decrease {
+        background-image: url("decrease_3@2x.png");
+    }
+
+    .discount {
+        background-image: url("discount_3@2x.png");
+    }
+
+    .guarantee {
+        background-image: url("guarantee_3@2x.png");
+    }
+
+    .invoice {
+        background-image: url("invoice_3@2x.png");
+    }
+
+    .special {
+        background-image: url("special_3@2x.png");
+    }
+
+    .menu-item{
+        display: table;
+        height: 54px;
+        width: 56px;
+        line-height: 14px;
+        padding-left: 12px;
+    }
+
+    .menu-icon{
+        display: inline-block;
+        vertical-align: top;
+        width: 12px;
+        height: 12px;
+        margin-right: 2px;
+        background-size: 12px 12px;
+        background-repeat: no-repeat;
+    }
+
+    .menu-text{
+        display: table-cell;
+        vertical-align: middle;
+        width: 56px;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 14px;
+        border-bottom: 1px solid rgba(7,17,27,0.1);
     }
 
     .foods-wrapper{
