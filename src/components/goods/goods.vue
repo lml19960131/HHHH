@@ -13,22 +13,22 @@
         <div class="foods-wrapper">
             <ul>
                 <li v-for="item in goods"  class="food-list">
-                    <h1 class="title">{{item.name}}</h1>
+                    <h1 class="food-title">{{item.name}}</h1>
                     <ul>
                         <li v-for="food in item.foods" class="food-item">
                             <div class="food-icon">
-                                <img :src="food.icon">
+                                <img :src="food.icon" width="57px" height="57px">
                             </div>
                             <div class="food-content">
                                 <h2 class="food-name">{{food.name}}</h2>
                                 <p class="food-description">{{food.description}}</p>
                                 <div class="food-extra">
-                                    <span>月售{{food.sellCount}}份</span>
+                                    <span class="food-count">月售{{food.sellCount}}份</span>
                                     <span>好评率{{food.rating}}%</span>
                                 </div>
                                 <div class="food-price">
                                     <span>￥{{food.price}}</span>
-                                    <span v-show="food.oldPrice">￥{{food.oldPrice}}</span>
+                                    <span v-show="food.oldPrice" class="oldPrice">￥{{food.oldPrice}}</span>
                                 </div>
                             </div>
                         </li>
@@ -1195,5 +1195,78 @@
     .foods-wrapper{
         flex: 1;
         background-color: white;
+    }
+
+    .food-title{
+        padding-left: 14px;
+        height: 26px;
+        line-height: 26px;
+        border-left: 2px solid #d9dde1;
+        font-size: 12px;
+        color: rgb(147,153,159);
+        background-color: #f3f5f7;
+    }
+
+    .food-item{
+        display: flex;
+        margin: 18px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(7,17,27,0.1);
+    }
+
+    .food-item:last-child{
+        border-bottom: hidden;
+        margin-bottom: 0;
+    }
+
+    .food-icon{
+        flex: 0 0 57px;
+        margin-right: 10px;
+    }
+
+    .food-content{
+        flex: 1;
+    }
+
+    .food-name{
+        font-size: 14px;
+        line-height: 14px;
+        margin: 2px 0 8px 0;
+        height: 14px;
+        color: rgb(7,17,27);
+        font-weight: 700;
+    }
+
+    .food-description{
+        font-size: 10px;
+        color: rgb(147,153,159);
+        margin-bottom: 8px;
+        line-height: 10px;
+    }
+
+    .food-extra{
+        font-size: 10px;
+        color: rgb(147,153,159);
+        line-height: 10px;
+    }
+
+    .food-count{
+        padding-right: 12px;
+    }
+
+    .food-price{
+        font-size: 14px;
+        color: rgb(240, 20, 20);
+        line-height: 24px;
+        font-weight: normal;
+    }
+
+    .oldPrice{
+        font-size: 10px;
+        color: rgb(147,153,159);
+        line-height: 24px;
+        font-weight: 700;
+        padding-left: 8px;
+        text-decoration: line-through;
     }
 </style>
