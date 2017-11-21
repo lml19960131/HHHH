@@ -36,10 +36,13 @@
                 </li>
             </ul>
         </div>
+        <shopcar></shopcar>
     </div>
 </template>
 
 <script>
+    import shopcar from "../shopcar/shopcar.vue"
+
     export default{
         name: 'goods',
         data(){
@@ -1119,11 +1122,17 @@
                         }
                     ]
                 }
-            ],
+            ]
             }
         },
         created() {
             this.classMap2=['decrease','discount','special','invoice','guarantee']
+        },
+        method: {
+
+        },
+        components: {
+            shopcar
         }
     }
 </script>
@@ -1142,6 +1151,7 @@
         flex: 0 0 80px;
         width: 80px;
         background-color: #f3f5f7;
+        overflow-y: auto;
     }
 
     .decrease {
@@ -1195,6 +1205,7 @@
     .foods-wrapper{
         flex: 1;
         background-color: white;
+        overflow-y: auto;
     }
 
     .food-title{
