@@ -30,6 +30,9 @@
                                     <span>￥{{food.price}}</span>
                                     <span v-show="food.oldPrice" class="oldPrice">￥{{food.oldPrice}}</span>
                                 </div>
+                                <div class="cartcontrol-wrapper">
+                                    <cartcontrol :food="food"></cartcontrol>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -42,6 +45,7 @@
 
 <script>
     import shopcar from "../shopcar/shopcar.vue"
+    import cartcontrol from "../cartcontrol/cartcontrol.vue"
 
     export default{
         name: 'goods',
@@ -1132,7 +1136,8 @@
 
         },
         components: {
-            shopcar
+            shopcar,
+            cartcontrol
         }
     }
 </script>
@@ -1237,6 +1242,7 @@
 
     .food-content{
         flex: 1;
+        position: relative;
     }
 
     .food-name{
@@ -1279,5 +1285,11 @@
         font-weight: 700;
         padding-left: 8px;
         text-decoration: line-through;
+    }
+
+    .cartcontrol-wrapper{
+        position: absolute;
+        right: 0;
+        bottom: 12px;
     }
 </style>
