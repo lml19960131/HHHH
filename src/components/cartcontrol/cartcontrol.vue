@@ -24,12 +24,23 @@
 //            }
         },
         method:{
-            addCart(){
+            addCart(event){
+                if(!event._constructed){
+                    return
+                }
                 if(!this.food.count){
                     Vue.set(this.food , 'count' , 1);
                 }
                 else {
                     this.food.count++;
+                }
+            },
+            decreaseCart(event){
+                if(!event._constructed){
+                    return
+                }
+                if(this.food.count){
+                    this.food.count--;
                 }
             }
         }
@@ -51,6 +62,11 @@
 
     .cart-count{
         display: inline-block;
+        vertical-align: top;
+        width: 12px;
+        font-size: 10px;
+        color: rgb(147,153,159);
+        line-height: 24px;
     }
 
     .cart-increase{
