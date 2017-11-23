@@ -5,23 +5,28 @@
         </div>
         <div class="cart-count" v-show="food.count>0">{{food.count}}</div>
         <div class="cart-increase">
-            <i class="fa fa-plus-circle" @click="addCart"></i>
+            <i class="fa fa-plus-circle"></i>
         </div>
     </div>
 </template>
 
 <script>
+    import Vue from 'vue'
+
     export default{
         name :'cartcontrol',
         props:{
             food:{
                 type: Object
-            }
+            },
+//            click:{
+//                type: Boolean
+//            }
         },
         method:{
             addCart(){
                 if(!this.food.count){
-                    this.food.count = 1;
+                    Vue.set(this.food , 'count' , 1);
                 }
                 else {
                     this.food.count++;

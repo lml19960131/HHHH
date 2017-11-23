@@ -1126,7 +1126,7 @@
                         }
                     ]
                 }
-            ]
+            ],
             }
         },
         created() {
@@ -1137,7 +1137,7 @@
         },
         components: {
             shopcar,
-            cartcontrol
+            cartcontrol,
         }
     }
 </script>
