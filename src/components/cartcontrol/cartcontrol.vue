@@ -5,7 +5,7 @@
         </div>
         <div class="cart-count" v-show="food.count>0">{{food.count}}</div>
         <div class="cart-increase">
-            <i class="fa fa-plus-circle"></i>
+            <i class="fa fa-plus-circle" @click="addCart"></i>
         </div>
     </div>
 </template>
@@ -19,9 +19,9 @@
             food:{
                 type: Object
             },
-//            click:{
-//                type: Boolean
-//            }
+            click:{
+                type: Boolean
+            }
         },
         method:{
             addCart(event){

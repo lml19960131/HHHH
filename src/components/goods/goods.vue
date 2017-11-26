@@ -15,7 +15,7 @@
                 <li v-for="item in goods"  class="food-list">
                     <h1 class="food-title">{{item.name}}</h1>
                     <ul>
-                        <li v-for="food in item.foods" class="food-item">
+                        <li v-for="food in item.foods" class="food-item" click="true">
                             <div class="food-icon">
                                 <img :src="food.icon" width="57px" height="57px">
                             </div>
